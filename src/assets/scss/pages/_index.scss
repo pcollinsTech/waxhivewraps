@@ -1,0 +1,20 @@
+.home_about {
+  padding: 50px 0;
+  p {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 800;
+  }
+  img {
+    max-width: 100%;
+  }
+  @include breakpoint(small) {
+    padding: 25px 20px;
+  }
+}
+
+.product {
+  p {
+    color: black;
+  }
+}

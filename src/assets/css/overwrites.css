@@ -1,0 +1,39 @@
+.products__container,
+.blog__container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+a {
+  color: white !important;
+}
+
+.blog_content a {
+  color: #32aa9f !important;
+}
+
+@media screen and (max-width: 575px) {
+  .mobile {
+    display: none !important;
+  }
+  .row .contianer {
+    padding: 0 10px;
+  }
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/avenir.otf") format("opentype");
+}
+
+body {
+  font-family: "Avenir";
+}
+
+img {
+  max-width: 100%;
+}
+
+.timeline-Header .timeline-InformationCircle-widgetParent {
+  display: none !important;
+}

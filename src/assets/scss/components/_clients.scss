@@ -1,0 +1,20 @@
+#clients {
+  text-align: center;
+  h2 {
+    color: black;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .client{
+    padding: 5px 10px;
+    img{
+      width: 80%;
+    }
+  }
+
+  @include breakpoint(small) {
+    display: none !important;
+  }
+}

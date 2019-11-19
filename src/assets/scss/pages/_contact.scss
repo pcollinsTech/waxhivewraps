@@ -1,0 +1,47 @@
+.contact_section {
+  position: relative;
+  margin-bottom: 50px;
+  img {
+    min-height: 350px;
+    object-fit: cover;
+    max-width: 100%;
+    opacity: 0.9;
+    filter: brightness(50%);
+  }
+  h2,
+  h3,
+  p {
+    color: _palette(white) !important;
+  }
+  .contact_section_info {
+    position: absolute;
+    width: 92%;
+    top: 28px;
+    left: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .green {
+    color: _palette(bg) !important;
+  }
+  @include breakpoint(small) {
+    .contact_section_right {
+      margin-right: 20px;
+      h3 {
+        font-size: 1.4rem;
+      }
+    }
+    img {
+      height: 620px;
+      object-fit: cover;
+    }
+  }
+}
+
+@include breakpoint(small) {
+  .banner_contact {
+    margin-top: 50px;
+  }
+}

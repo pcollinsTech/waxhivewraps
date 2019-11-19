@@ -1,0 +1,17 @@
+.blog_summary_item {
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 10px;
+  h3 {
+    color: _palette(black);
+    margin-bottom: 0;
+  }
+  img {
+    border-radius: 10px 10px 0 0;
+    max-width: 100%;
+  }
+  p,
+  span {
+    font-size: 15px;
+    font-weight: 400;
+  }
+}

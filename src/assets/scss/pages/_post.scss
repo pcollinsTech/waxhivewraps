@@ -1,0 +1,8 @@
+.blog_content {
+  position: relative;
+  padding-top: 10em;
+
+  @include breakpoint(large) {
+    margin-top: 0;
+  }
+}

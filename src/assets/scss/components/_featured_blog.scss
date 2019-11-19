@@ -1,0 +1,36 @@
+.featured_blog {
+  position: relative;
+  margin-bottom: 50px;
+  img {
+    max-width: 100%;
+    opacity: 0.9;
+    filter: brightness(50%);
+  }
+  h2 {
+    color: _palette(white) !important;
+  }
+  button{
+    width: 180px;
+  }
+  .featured_blog_inside_top {
+    color: _palette(white);
+    position: absolute;
+    top: 28px;
+    left: 36px;
+  }
+  .featured_blog_inside_bottom {
+    color: _palette(white);
+    position: absolute;
+    bottom: 28px;
+    left: 36px;
+    p {
+      font-size: 15px;
+    }
+  }
+  @include breakpoint(small) {
+    img {
+      height: 410px;
+      object-fit: cover;
+    }
+  }
+}

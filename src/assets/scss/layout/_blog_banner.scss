@@ -1,0 +1,191 @@
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Banner */
+
+#blog_banner {
+  @include vendor('align-items', 'center');
+  @include vendor('display', 'flex');
+  @include padding(4em, 0, (2em, 0, 0, 0));
+
+  position: relative;
+  text-align: center;
+  color: white;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 0 !important;
+  cursor: default;
+  height: 60vh;
+  margin-bottom: -3.25em;
+  max-height: 32em;
+  min-height: 22em;
+  top: -3.25em;
+
+  &:after {
+    @include vendor('transition', 'opacity #{_duration(banner)} ease');
+    @include vendor('transition-delay', '0.75s');
+    @include vendor('pointer-events', 'none');
+    display: block;
+    left: 0;
+    opacity: 0.85;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  h1 {
+    color: white;
+    font-size: 4.6em;
+    margin-bottom: 0;
+  }
+  img {
+    align: top;
+    -webkit-filter: brightness(40%); /* Safari 6.0 - 9.0 */
+    filter: brightness(40%);
+  }
+  > .inner {
+    @include vendor('transition', ('opacity 1.5s ease', 'transform 0.5s ease-out', 'filter 0.5s ease', '-webkit-filter 0.5s ease'));
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 !important;
+    margin: 0 auto;
+    z-index: 2;
+
+    .image {
+      display: none;
+    }
+
+    header {
+      width: auto;
+
+      > :first-child {
+        width: auto;
+
+        &:after {
+          max-width: 100%;
+        }
+      }
+    }
+
+    .content {
+      @include vendor('display', 'flex');
+      @include vendor('align-items', 'center');
+      position: relative;
+      margin: 0 auto;
+      text-align: center;
+      color: _palette(fg);
+      p {
+        font-size: 1.2em;
+        font-weight: _font(weight-bold);
+        letter-spacing: _font(letter-spacing);
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &.blog_major {
+    text-align: center;
+    overflow: hidden;
+    min-height: 30em;
+    max-height: 50em;
+
+    &.alt {
+      opacity: 0.75;
+    }
+  }
+
+  .body.is-loading & {
+    &:after {
+      opacity: 1;
+    }
+
+    > .inner {
+      @include vendor('filter', 'blur(0.125em)');
+      //   @include vendor('transform', 'translateX(-0.5em)');
+      opacity: 0;
+    }
+  }
+
+  @include breakpoint(large) {
+    top: -9.25em;
+    background-attachment: scroll;
+    h1 {
+      font-size: 3.6em;
+    }
+  }
+  @include breakpoint(medium) {
+    top: -12.25em;
+    h1 {
+      font-size: 1.6em;
+    }
+  }
+  @include breakpoint(medium) {
+    top: -14.25em;
+    h1 {
+      font-size: 1.6em;
+    }
+  }
+
+  @include breakpoint(small) {
+    @include padding(3em, 0, (2em, 0, 0, 0));
+    height: auto;
+    margin-bottom: -2.75em;
+    max-height: none;
+    min-height: 0;
+    top: -5.75em;
+
+    h1 {
+      margin: 50px 0 0;
+
+      padding: 50px 0;
+      font-size: 1.5em;
+    }
+
+    > .inner {
+      .content {
+        display: block;
+
+        > * {
+          margin-left: 0;
+          margin-bottom: _size(element-margin);
+        }
+      }
+    }
+
+    &.blog_major {
+      height: auto;
+      min-height: 0;
+      max-height: none;
+    }
+  }
+
+  @include breakpoint(xsmall) {
+    @include padding(4em, 0, (2em, 0, 0, 0));
+    top: -8.75em;
+    > .inner {
+      h1 {
+        font-size: 1.8em;
+      }
+      .content {
+        p {
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &.blog_major {
+      @include padding(6em, 0, (2em, 0, 0, 0));
+    }
+  }
+}

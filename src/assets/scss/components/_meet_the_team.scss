@@ -1,0 +1,16 @@
+#team {
+  text-align: center;
+  h2,
+  h3 {
+    color: _palette(black);
+  }
+  .about {
+    text-align: left;
+    h3 {
+      margin-bottom: 0;
+    }
+    .member_image {
+      max-width: 100%;
+    }
+  }
+}
