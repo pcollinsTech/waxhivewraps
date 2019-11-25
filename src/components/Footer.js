@@ -10,7 +10,7 @@ const Footer = () => (
         <div className="col-md-3 footer_item text-left">
           <h5>WaxHiveWraps</h5>
           <p className="mt-2">
-            Lorem ipsum <br />
+            Hanstholmvej <br />
             Thy
             <br />
             Denmark

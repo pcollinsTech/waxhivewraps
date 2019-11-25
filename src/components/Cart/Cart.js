@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import ShopContext from "../../context/shop/shopContext";
 import CartItemList from "./CartItemList";
+import "./cart.scss";
 
-const Cart = () => (
-  <section id="cart" className="major">
-    <div className="inner">
-      <header className="my-5 pt-5"></header>
-      <div className="row mt-5">
-        <div className="container contact_section">
-          <div className="contact_section_info">
-            <CartItemList />
-          </div>
+const Cart = () => {
+  const shopContext = useContext(ShopContext);
+  const { cartList, showCart } = shopContext;
+  return (
+    <section id="cart" className={`major ${showCart ? "show" : ""}`}>
+      <div className="container">
+        <div className="row">
+          <CartItemList cartList={cartList} />
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Cart;

@@ -1,0 +1,14 @@
+.btn-primary {
+  background-color: _palette(bg) !important;
+  border-color: _palette(bg) !important;
+}
+.btn-info {
+  background-color: _palette(bg-alt) !important;
+  border-color: _palette(bg-alt) !important;
+}
+
+.table-info,
+.table-info > th,
+.table-info > td {
+  background-color: _pallete(bg-alt) !important;
+}

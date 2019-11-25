@@ -88,10 +88,21 @@
 @import "pages/contact";
 @import "pages/post";
 
+@import "base/bootstrapOverWrties";
 img {
   max-width: 100%;
 }
 
 a:hover {
   color: _palette(bg-altS) !important;
+}
+
+td,
+th,
+tr {
+  vertical-align: middle;
+}
+
+#hexagon {
+  content: "\2B21";
 }

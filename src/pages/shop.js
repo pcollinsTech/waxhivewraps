@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Banner from "../components/Banner";
 import Products from "../components/Products/Products";
@@ -28,7 +29,7 @@ class HomeIndex extends React.Component {
               </p>
             </div>
           </div>
-          <Products />
+          <Products products={this.props.data.allWcProducts.edges} />
         </div>
       </Layout>
     );
@@ -36,3 +37,33 @@ class HomeIndex extends React.Component {
 }
 
 export default HomeIndex;
+
+export const productsQuery = graphql`
+  query {
+    allWcProducts {
+      edges {
+        node {
+          price
+          purchasable
+          catalog_visibility
+          id
+          name
+          slug
+          regular_price
+          sale_price
+          description
+          images {
+            alt
+            name
+            src
+          }
+          product_variations {
+            price
+            weight
+          }
+          wordpress_id
+        }
+      }
+    }
+  }
+`;

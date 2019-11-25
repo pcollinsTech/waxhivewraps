@@ -1,44 +1,34 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import CartItem from "./CartItem";
 import ShopContext from "../../context/shop/shopContext";
-import productImage from "../../assets/images/eddie.jpg";
 
 const CartItemList = () => {
-  // const shopContext = useContext(ShopContext);
+  const shopContext = useContext(ShopContext);
 
-  // const { loading, cart } = shopContext;
+  const { cartList } = shopContext;
 
-  const cart = [
-    {
-      id: "1",
-      title: "Wrap Number one",
-      quantity: 1,
-      img: productImage,
-      slug: "wrap-number-one"
-    },
-    {
-      id: "1",
-      title: "Wrap Number two",
-      quantity: 1,
-      img: productImage,
-      slug: "wrap-number-two"
-    },
-    {
-      id: "1",
-      title: "Wrap Number three",
-      quantity: 1,
-      img: productImage,
-      slug: "wrap-number-three"
-    }
-  ];
-
+  console.log(cartList);
   return (
     <Fragment>
-      <table>
-        {cart.map(item => (
-          <CartItem key={item.id} item={item} />
-        ))}
-      </table>
+      <div className="container my-5">
+        <div className="row">
+          <table className="table table-info">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cartList.map(item => (
+                <CartItem key={item.id} item={item} />
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </Fragment>
   );
 };

@@ -1,0 +1,20 @@
+#products {
+  text-align: center;
+  .product {
+    text-align: left;
+    h2,
+    h3 {
+      color: _palette(black);
+    }
+    .product_image {
+      max-width: 100%;
+    }
+    a {
+      color: white;
+    }
+
+    // button {
+    //   border-radius: 0;
+    // }
+  }
+}
