@@ -3,15 +3,18 @@ import ShopContext from "../../context/shop/shopContext";
 import CartItemList from "./CartItemList";
 import "./cart.scss";
 
-const Cart = () => {
+const Cart = ({ cartList, removeFromCart }) => {
   const shopContext = useContext(ShopContext);
-  const { cartList, showCart } = shopContext;
+  const { showCart } = shopContext;
   return (
     <section id="cart" className={`major ${showCart ? "show" : ""}`}>
       <div className="container">
         <div className="row">
-          <CartItemList cartList={cartList} />
+          <CartItemList cartList={cartList} removeFromCart={removeFromCart} />
         </div>
+      </div>
+      <div className="container">
+        <div className="row">TOTAL</div>
       </div>
     </section>
   );

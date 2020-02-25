@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
+import Layout from "../layout/Layout";
 import Banner from "../components/Banner";
 import banner from "../assets/images/grassWrapsInBox.jpg";
 export const ProductPageTemplate = ({ img, title, content, price }) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
+import Layout from "../layout/Layout";
 import Banner from "../components/Banner";
 import Products from "../components/Products/Products";
 import banner from "../assets/images/gardenBanner.jpg";

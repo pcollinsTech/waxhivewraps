@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "Avenir";
-  src: url("../fonts/avenir.otf") format("opentype");
+  font-family: "Copperplate Gothic";
+  src: url("../fonts/Copperplate Gothic Light Regular.ttf") format("opentype");
 }
-@font-face {
-  font-family: "Avenir-Black";
-  src: url("../fonts/Avenir-Black.ttf") format("truetype");
-}
+// @font-face {
+//   font-family: "Copperplate Gothic Light";
+//   src: url("../fonts/Copperplate Gothic Light.ttf") format("truetype");
+// }
 
 // Misc.
 $misc: (
@@ -30,15 +30,15 @@ $size: (
 // Font.
 $font: (
   family: (
-    "Avenir",
-    "Avenir-Black",
-    Helvetica,
+    "Copperplate Gothic",
+    // "Copperplate Gothic Light",
+      Helvetica,
     sans-serif
   ),
   family-fixed: (
-    "Avenir",
-    "Avenir-Black",
-    monospace
+    "Copperplate Gothic",
+    // "Copperplate Gothic Light",
+      monospace
   ),
   weight: 300,
   weight-bold: 600,

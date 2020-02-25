@@ -24,22 +24,7 @@ const Footer = () => (
             </a>
           </div>
         </div>
-        <div className="col-md-6 footer_item">
-          <h5>Subscribe to our newsletter</h5>
-          <form className="form-inline mt-2">
-            <div className="form-group">
-              <input type="email" className="form-control" placeholder="Email" />
-            </div>
-            <button type="submit">Subscribe</button>
-          </form>
-          <p>
-            In accordance with our GDPR obligations we seek your consent to receive our (funny, clever, witty) newsletters. You may withdraw your
-            consent at any time in the future. You can view our privacy policy <Link to="/privacy-policy"> here.</Link>
-          </p>
-          <ul className="copyright text-center mt-5">
-            <li>&copy; Wax Hive Wraps 2019</li>
-          </ul>
-        </div>
+        <div className="col-md-6 footer_item"></div>
         <div className="col-md-3 footer_item ">
           <h5>Follow us</h5>
           <ul className="container icons mt-2">

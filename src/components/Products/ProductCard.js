@@ -8,6 +8,10 @@ const ProductCard = ({ item }) => {
   const { addToCart } = shopContext;
 
   const { slug, images } = item;
+
+  // const addItemToCart = item => {
+  //   addToCart(item);
+  // };
   return (
     <Fragment>
       <div className="col-sm-4">

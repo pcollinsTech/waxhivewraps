@@ -7,7 +7,6 @@ import Header from "./Header";
 import SideCart from "./SideCart";
 import Menu from "./Menu";
 import Footer from "./Footer";
-import ShopState from "../context/shop/ShopState";
 class Layout extends React.Component {
   constructor(props) {
     super(props);
@@ -55,19 +54,17 @@ class Layout extends React.Component {
     const { children } = this.props;
     console.log(this.state.isCartVisible);
     return (
-      <ShopState>
-        <div className={`body ${this.state.loading} ${this.state.isMenuVisible ? "is-menu-visible" : ""}`}>
-          <Header onToggleMenu={this.handleToggleMenu} onToggleCart={this.handleToggleCart} />
-          {children}
-          <Footer />
-          <Menu onToggleMenu={this.handleToggleMenu} />
-          <OutsideClickHandler onOutsideClick={() => this.handleToggleCartOutside}>
-            <div className={this.state.isCartVisible ? "is-cart-visible" : ""}>
-              <SideCart onToggleCart={this.handleToggleCart} />
-            </div>
-          </OutsideClickHandler>
-        </div>
-      </ShopState>
+      <div className={`body ${this.state.loading} ${this.state.isMenuVisible ? "is-menu-visible" : ""}`}>
+        <Header onToggleMenu={this.handleToggleMenu} onToggleCart={this.handleToggleCart} />
+        {children}
+        <Footer />
+        <Menu onToggleMenu={this.handleToggleMenu} />
+        <OutsideClickHandler onOutsideClick={() => this.handleToggleCartOutside}>
+          <div className={this.state.isCartVisible ? "is-cart-visible" : ""}>
+            <SideCart onToggleCart={this.handleToggleCart} />
+          </div>
+        </OutsideClickHandler>
+      </div>
     );
   }
 }

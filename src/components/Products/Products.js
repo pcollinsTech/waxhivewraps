@@ -8,7 +8,7 @@ const Products = ({ products }) => {
   // } = data;
   return (
     <Fragment>
-      <div id="products">
+      <div id="products" className="mb-5">
         <h2 className="black mb-5">Our Wraps</h2>
         <div className="row">
           <div className="container products__container">

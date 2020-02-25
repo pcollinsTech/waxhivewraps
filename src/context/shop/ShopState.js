@@ -2,6 +2,7 @@ import React, { useReducer } from "react";
 import ShopContext from "./shopContext";
 import ShopReducer from "./ShopReducer";
 import { ADD_TO_CART, SET_LOADING, REMOVE_FROM_CART, SET_QUANTITY } from "../types";
+
 const ShopState = props => {
   const inititalState = {
     cartList: [
@@ -39,11 +40,21 @@ const ShopState = props => {
   const [state, dispatch] = useReducer(ShopReducer, inititalState);
 
   const addToCart = item => {
-    console.log("ADD TO CART", item);
+    const updatedCart = state.cartList.map(cartItem => {
+      if (cartItem.id === item.id) {
+        cartItem.quantity++;
+        return cartItem;
+      }
+    });
+    updatedCart.push(item);
+    console.log("ADD TO CART", updatedCart);
+    // if (item.id === id) {
+    //   item.quantity = quantity;
+    // }
     // const updatedCart = state.cartList.push(item);
     dispatch({
       type: ADD_TO_CART,
-      payload: item
+      payload: updatedCart
     });
   };
 

@@ -1,13 +1,7 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment } from "react";
 import CartItem from "./CartItem";
-import ShopContext from "../../context/shop/shopContext";
 
-const CartItemList = () => {
-  const shopContext = useContext(ShopContext);
-
-  const { cartList } = shopContext;
-
-  console.log(cartList);
+const CartItemList = ({ cartList, removeFromCart }) => {
   return (
     <Fragment>
       <div className="container my-5">
@@ -23,7 +17,7 @@ const CartItemList = () => {
             </thead>
             <tbody>
               {cartList.map(item => (
-                <CartItem key={item.id} item={item} />
+                <CartItem key={item.id} item={item} removeFromCart={removeFromCart} />
               ))}
             </tbody>
           </table>

@@ -66,6 +66,14 @@ const config = {
         }
       }
     },
+    {
+      resolve: `gatsby-source-stripe`,
+      options: {
+        objects: ["Sku"],
+        secretKey: "sk_test_2ohG0bd7PUHkQeU3ZQFXXxu1",
+        downloadFiles: true
+      }
+    },
     "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-manifest`,
@@ -74,7 +82,6 @@ const config = {
         icon: "src/assets/images/favicon.png" // This path is relative to the root of the site.
       }
     },
-
     "gatsby-plugin-sass",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp"

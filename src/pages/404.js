@@ -1,6 +1,6 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import Banner from '../components/Banner'
+import React from "react";
+import Layout from "../layout/Layout";
+import Banner from "../components/Banner";
 
 const NotFoundPage = () => (
   <Layout>
@@ -15,6 +15,6 @@ const NotFoundPage = () => (
       </div>
     </div>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

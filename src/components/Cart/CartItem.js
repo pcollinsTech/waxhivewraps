@@ -1,11 +1,7 @@
-import React, { Fragment, useContext } from "react";
-import ShopContext from "../../context/shop/shopContext";
+import React, { Fragment } from "react";
 import { Link } from "gatsby";
-import QuantityCounter from "../QuantityCounter.js/QuantityCounter";
-const CartItem = ({ item }) => {
-  const shopContext = useContext(ShopContext);
-
-  const { removeFromCart } = shopContext;
+import QuantityCounter from "../QuantityCounter";
+const CartItem = ({ item, removeFromCart }) => {
   const { name, slug, quantity, images, price, id } = item;
 
   // removeItem = id => {};

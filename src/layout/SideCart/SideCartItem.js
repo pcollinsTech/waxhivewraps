@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from "react";
 import ShopContext from "../../context/shop/shopContext";
-import QuantityCounter from "../QuantityCounter.js/QuantityCounter";
+import QuantityCounter from "../../components/QuantityCounter";
 
 const SideCartItem = ({ item: { images, name, quantity }, item }) => {
   const shopContext = useContext(ShopContext);
